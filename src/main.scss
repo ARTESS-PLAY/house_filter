@@ -1,0 +1,195 @@
+body {
+  overflow-y: scroll;
+
+  &:has(.filters_open) {
+    overflow: hidden;
+  }
+}
+
+.filters {
+  overscroll-behavior: contain;
+}
+
+.range__item_one::-webkit-slider-thumb {
+  margin-left: 0;
+}
+
+.range_double .range__items {
+  left: 18px;
+  right: 18px;
+}
+
+.card__previews-section {
+  display: block;
+}
+.range_double {
+  flex-direction: column;
+}
+.range_double .range__input {
+  width: 100%;
+  /* Chrome, Safari, Edge, Opera */
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  /* Firefox */
+  &[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+.range_double .range__input_one {
+  border-radius: 12px 0 0 12px;
+  padding-left: 18px;
+}
+
+.range_double .range__input_two {
+  padding-right: 18px;
+  text-align: right;
+  border-radius: 0 12px 12px 0;
+}
+
+.range_double .range__top {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-self: stretch;
+}
+.range_double .range__sep {
+  align-self: center;
+}
+.range_double .range__input {
+  //padding: 0;
+}
+
+.range_double .range__part {
+  display: flex;
+  flex-grow: 1;
+  //padding-left: 18px;
+  //padding-right: 18px;
+  position: relative;
+
+  &:first-of-type {
+    order: -1;
+  }
+  //&:last-of-type {
+  //  justify-content: flex-end;
+  //}
+}
+.range_double .range__part:first-of-type .range__legend ~ .range__input {
+  padding-left: calc(18px + 2ch + 0.3em);
+}
+.range_double .range__legend {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  color: #313438;
+  position: absolute;
+  //align-self: center;
+  //margin-right: 0.3em;
+  width: 2ch;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 18px;
+  pointer-events: none;
+  box-sizing: content-box;
+}
+.range_double .range__part:last-of-type .range__legend {
+  right: calc(18px + var(--range-input-width) + 0.3em);
+}
+.card__features {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 118px;
+}
+.card__feature {
+  display: flex;
+  align-items: center;
+  color: var(--color-dark);
+  background-color: #ffffff;
+  border: 1px solid #ecedef;
+  box-shadow: 0 20px 60px rgba(140, 140, 140, 0.1);
+  border-radius: 24px;
+  padding: 30px;
+  font-weight: 500;
+  font-size: 20px;
+}
+.card__feature:after {
+  content: attr(data-title);
+}
+.card__feature:before {
+  content: '';
+  width: 64px;
+  height: 64px;
+  flex: none;
+  margin-right: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+[data-title='С 2-мя санузлами']:after {
+  content: 'Два санузла';
+}
+[data-title='С видом во двор']:after {
+  content: 'Вид во двор';
+}
+[data-title='С большой кухней-гостиной']:after {
+  content: 'Большая кухня-гостиная';
+}
+[data-title='С панорамным остеклением лоджии']:after {
+  content: 'Панорамное остекление лоджии';
+}
+[data-title='С гардеробной']:after {
+  content: 'Просторная гардеробная';
+  height: 54px;
+}
+[data-title='С 2-мя санузлами']:after {
+  content: 'Два санузла';
+}
+[data-title='С распашной планировкой']:after {
+  content: 'Распашная планировка';
+}
+[data-title='С двумя гардеробными']:after {
+  content: 'Две гардеробные';
+}
+
+[data-title='Торцевая квартира']:before {
+  background-image: url('https://familia33.ru/wp-content/themes/familia33/static/img/end-flat.svg');
+}
+[data-title='С видом во двор']:after {
+  background-image: url('https://familia33.ru/wp-content/themes/familia33/static/img/ourtyard-view.svg');
+}
+[data-title='С большой кухней-гостиной']:after {
+  background-image: url('https://familia33.ru/wp-content/themes/familia33/static/img/kitchen-living.svg');
+}
+[data-title='С панорамным остеклением лоджии']:after {
+  background-image: url('https://familia33.ru/wp-content/themes/familia33/static/img/panoramic-glazing.svg');
+}
+[data-title='Выход на лоджию с кухни']:after {
+  background-image: url('https://familia33.ru/wp-content/themes/familia33/static/img/loggia-kitchen.svg');
+}
+[data-title='С гардеробной']:after {
+  background-image: url('https://familia33.ru/wp-content/themes/familia33/static/img/drawer-wardrobe.svg');
+}
+[data-title='С 2-мя санузлами']:after {
+  background-image: url('https://familia33.ru/wp-content/themes/familia33/static/img/two-bathrooms.svg');
+}
+[data-title='С распашной планировкой']:after {
+  background-image: url('https://familia33.ru/wp-content/themes/familia33/static/img/swing-layout.svg');
+}
+[data-title='С мастер-спальней']:after {
+  background-image: url('https://familia33.ru/wp-content/themes/familia33/static/img/master-bedroom.svg');
+}
+[data-title='С двумя гардеробными']:after {
+  background-image: url('https://familia33.ru/wp-content/themes/familia33/static/img/two-dressing-rooms.svg');
+}
+[data-title='Выход на лоджию из комнаты']:after {
+  background-image: url('https://familia33.ru/wp-content/themes/familia33/static/img/loggia-room.svg');
+}
+[data-title='Кровать в нише']:after {
+  background-image: url('https://familia33.ru/wp-content/themes/familia33/static/img/niche-bed.svg');
+}
+.card__holder {
+  margin-bottom: 14px;
+}
